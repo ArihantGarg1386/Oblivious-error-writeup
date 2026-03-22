@@ -1,4 +1,4 @@
-# Oblivious-error-writeup
+     # Oblivious-error-writeup
 **Category:**(Cryptography)
 
 In This challenge, The author accidentally deleted the original code and replaced It.
@@ -96,6 +96,8 @@ print(long_to_bytes(message))
 
 ```
 The Final Flag we get is "`utflag{my_obl1v10u5_fr13nd_ru1n3d_my_c0de}`"
+
+** A Quick Note on the Numbers:**  Because the server generates a new set of variables (N, e, x0, x1) on every single connection, you might notice that specific numbers in my screenshots don't always perfectly match the numbers in my code snippets. I had to connect to the challenge multiple times while testing the exploit, grabbing screenshots, and writing this documentation! The underlying math, however, remains exactly the same.
 
 
     
