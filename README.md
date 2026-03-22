@@ -29,7 +29,7 @@ Then I again tried with the small values and this time is worked fine.Further Re
 ```
    v = (x0 + (e ^ e)) % N
    v = (x0) % N
-   v =  x0
+   v =  x0  ( as the server always chose x0 < N)
 ```
 
 
