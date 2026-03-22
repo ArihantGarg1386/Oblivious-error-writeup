@@ -5,7 +5,7 @@ In This challenge, The author accidentally deleted the original code and replace
 Which made the message (presumably the flag) "undecodable"
 
 First, I connect to the server via `nc challenge.utctf.live 8379` which gave me `N`,`e`,`x0`,`x1` and prompted me to enter `k`.Initially I tried common test cases like 0 , negative, very large number.
-Then i checked the "my-code.txt" file (snipped below)
+Then i checked the **"my-code.txt"** file (snipped below)
 
 
 ```
@@ -26,7 +26,7 @@ I tried putting small values as to see how the function behaves, But the outputs
 I searched for it online and found out that in python `^` is "XOR"(exclusive OR) and not equivalent to "`pow()` or `**`".
 
 
-Then I again tried with the small dummy values and this time it worked fine. Further Research on XOR made me realise that " Any number XORed with itself is 0" so i tried `k = e` to the server which would work like :
+Then I again tried with the small dummy values and this time it worked fine. Further Research on **XOR** made me realise that " Any number XORed with itself is 0" so i tried `k = e` to the server which would work like :
 
 
 ```
@@ -49,14 +49,14 @@ print(long_to_bytes(message))
 This revealed the flag as "`hgsynt{Pbatengf! Lbh pnhtug n erq ureevat!}`"
 
 
-This is a standard case of "Caesar's Cipher" which I decrypted using `https://cyberchef.io` using "ROT13"
+This is a standard case of **"Caesar's Cipher"** which I decrypted using `https://cyberchef.io` using **"ROT13"**
 
 
 <img width="1920" height="937" alt="image" src="https://github.com/user-attachments/assets/83815190-fe20-49b5-a153-32a7e2ece19e" />
 
 flag is "`utflag{Congrats! You caught a red herring!}`"
 
-Which said "red herring" in the flag. AND YES I DID TRY TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.
+Which said **"red herring"** in the flag. **AND YES I DID TRY TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.**
 
 This is where I got stuck with this challenge. I went back to the problem statement to find more clues and it mentioned it uses " RSA-based 1-2 oblivious transfer protocol program". After studying 1-2 OT protocol for a while , I finally found the solution.
 
