@@ -52,6 +52,14 @@ This is a standard case of "Caesar's Cipher" which I decrypted using `https://cy
 
 <img width="1920" height="937" alt="image" src="https://github.com/user-attachments/assets/83815190-fe20-49b5-a153-32a7e2ece19e" />
 
+flag is "`utflag{Congrats! You caught a red herring!}`"
+
+Which said "red herring" in the flag. AND YES I DID TRIED TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.
+
+
+
+
+
 
 
 
