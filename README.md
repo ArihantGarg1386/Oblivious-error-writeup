@@ -67,6 +67,40 @@ Basically, the server holds exactly 2 messages. It is designed such that the use
 Since in the previous case, when we put `k=e`, we get `v=x0`.
 Now we will purposefully set `v=x1` and . Which means we get `x1 = ( x0 + ( int(k) ^ e)) % N` . And from this , we will calculate `k` and give it back to the server.
 
+Now the math becomes something like this:
+```
+   x1 = ( x0 + ( int(k) ^ e)) % N  
+   x1 = x0 + int(k) ^ e - CN                       (C is some constant that satisfies the equation)
+   x1 - x0 - CN = int(k) ^ e
+  (x1 - x0) % N = int(k) ^ e
+    Taking XOR with e both sides
+  ((x1 - x0) % N) ^ e = (int(k) ^ e) ^ e = int(k)
+  ```
+From this we can find the `k` corresponding to `x1` using the following script
+
+```
+   x0 = 1635098239013264044126027799564779028895101810323127906179033019287020192470288173854210045390953471299117008362247280688033069830294878535369470132863666
+x1 = 1535307749372344639101360180775422009419295966380581195016572427928745807105717072927442947719306712851940243117467252157479307125106154881587379733741575
+N = 7320659687307596757836953692756431226792068948238181385629069698561912361441625060134195858959437733983006037972511014741645444917789509936374658031840479
+e = 65537
+Z = (x1 - x0) % N       
+k = Z ^ e
+print(K)
+```
+
+Now we have to give this value of `K` to server to get messages.Finally, using the same script, we can convert the integers back to ASCII flag.
+
+```
+  from Crypto.Util.number import long_to_bytes
+message = 16441782473165749985269251414928450202051900518929647105868978172963309169080628914206924705003483790602
+print(long_to_bytes(message))
+
+```
+
+
+
+    
+
 
 
 
