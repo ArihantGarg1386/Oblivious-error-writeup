@@ -32,13 +32,16 @@ Then I again tried with the small dummy values and this time is worked fine.Furt
 
 ```
    v = (x0 + (e ^ e)) % N
+
    v = (x0) % N
+
    v =  x0  ( as the server always chose x0 < N)
 ```
 
 This gave me two messages which I converted to ASCII using this simple script
 ```
 from Crypto.Util.number import long_to_bytes
+
 message = 14614909182015656433423375395560694783276217129595018028195683192534693780147751705041670356317823574397
 print(long_to_bytes(message))
 ```
