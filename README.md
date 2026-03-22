@@ -1,4 +1,4 @@
-     # Oblivious-error-writeup
+ # Oblivious-error-writeup
 **Category:**(Cryptography)
 
 In This challenge, The author accidentally deleted the original code and replaced It.
