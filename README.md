@@ -38,7 +38,7 @@ Then I again tried with the small dummy values and this time is worked fine.Furt
    v =  x0  ( as the server always chose x0 < N)
 ```
 
-This gave me two messages which I converted to ASCII using this simple script
+##This gave me two messages which I converted to ASCII using this simple script
 ```
 from Crypto.Util.number import long_to_bytes
 
@@ -58,6 +58,8 @@ This is a standard case of "Caesar's Cipher" which I decrypted using `https://cy
 flag is "`utflag{Congrats! You caught a red herring!}`"
 
 Which said "red herring" in the flag. AND YES I DID TRIED TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.
+
+
 
 
 
