@@ -59,6 +59,15 @@ flag is "`utflag{Congrats! You caught a red herring!}`"
 
 Which said "red herring" in the flag. AND YES I DID TRIED TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.
 
+This is where I got stuck with this challenge. I went back to problem statement to find more clues and it mentioned it uses " RSA-based 1-2 oblivious transfer protocol program". After studying 1-2 OT protocol for a while , I finally found the solution.
+
+
+Basically, the server holds exactly 2 messages. It is designed such that the user can choose one of them without the server knowing which one was picked.
+
+Since in the previous case, when we put `k=e`, we get `v=x0`.
+Now we will purposefully set `v=x1` and . Which means we get `x1 = ( x0 + ( int(k) ^ e)) % N` . And from this , we will calculate `k` and give it back to the server.
+
+
 
 
 
