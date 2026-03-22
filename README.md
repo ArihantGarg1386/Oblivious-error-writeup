@@ -7,7 +7,20 @@ Which made the message (presumably the flag) "undecodable"
 
 First, I connect to the server via `nc challenge.utctf.live 8379` which gave me N,e,x0,x1 and prompted me to enter k.Initially i tried common test cases like 0 , negative, very large number.
 
-then i opened the my 
+then i checked the "my-code.txt" file
+```
+while True:
+    try:
+        print("Please pick a value k.")
+        k = int(input())
+        break
+    except ValueError:
+        print("Invalid value. Please pick an integer.")
+        print("Please pick a value k.")
+        k = int(input())
+
+v = (x0 + (int(k) ^ e)) % N
+```
 
 
 
