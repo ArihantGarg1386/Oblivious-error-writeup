@@ -5,7 +5,9 @@ In This Challenge, The author accidentally deleted the original code and replace
 Which made the message (presumably the flag) "undecodable"
 
 
-First, I connect to the server via `nc challenge.utctf.live 8379` which gave me 
+First, I connect to the server via `nc challenge.utctf.live 8379` which gave me N,e,x0,x1 and prompted me to enter k.Initially i tried common test cases like 0 , negative, very large number.
+
+then i opened the my 
 
 
 
