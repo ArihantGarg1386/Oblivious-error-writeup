@@ -31,6 +31,20 @@ Then I again tried with the small dummy values and this time is worked fine.Furt
    v = (x0) % N
    v =  x0  ( as the server always chose x0 < N)
 ```
+This gave me two messages which I converted to ASCII using this simple script
+```
+message_int = 14614909182015656433423375395560694783276217129595018028195683192534693780147751705041670356317823574397
+
+byte_count = (message_int.bit_length() + 7) // 8
+
+# 3. Convert integer to raw bytes
+# 'big' means the most significant byte is at the beginning (standard for crypto)
+raw_bytes = large_int.to_bytes(byte_count, byteorder='big')
+
+# 4. Decode bytes into a string
+# 'replace' ensures we see the readable parts even if there is "messy" padding
+print("--- DECODED TEXT ---")
+print(raw_bytes.decode('utf-8', errors='replace'))
 
 
 
