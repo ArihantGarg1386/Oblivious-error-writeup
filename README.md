@@ -1,7 +1,7 @@
 # Oblivious-error-writeup
 **Category:**(Cryptography)
 
-In This Challenge, The author accidentally deleted the original code and replaced it.
+In This Challenge, The author accidentally deleted the original code and replaced It.
 Which made the message (presumably the flag) "undecodable"
 
 First, I connect to the server via `nc challenge.utctf.live 8379` which gave me `N`,`e`,`x0`,`x1` and prompted me to enter `k`.Initially I tried common test cases like 0 , negative, very large number.
@@ -47,7 +47,7 @@ print(long_to_bytes(message))
 This revealed the flag as "`hgsynt{Pbatengf! Lbh pnhtug n erq ureevat!}`"
 
 
-This is a standard case of "Caeser's Cipher" which I decrypted using `https://cyberchef.io` using "ROT13"
+This is a standard case of "Caesar's Cipher" which I decrypted using `https://cyberchef.io` using "ROT13"
 
 
 <img width="1920" height="937" alt="image" src="https://github.com/user-attachments/assets/83815190-fe20-49b5-a153-32a7e2ece19e" />
