@@ -1,12 +1,11 @@
 # Oblivious-error-writeup
 **Category:**(Cryptography)
 
-In This Challenge, The author accidentally deleted the original code and replaced It.
+In This challenge, The author accidentally deleted the original code and replaced It.
 Which made the message (presumably the flag) "undecodable"
 
 First, I connect to the server via `nc challenge.utctf.live 8379` which gave me `N`,`e`,`x0`,`x1` and prompted me to enter `k`.Initially I tried common test cases like 0 , negative, very large number.
-
-then i checked the "my-code.txt" file (snipped below)
+Then i checked the "my-code.txt" file (snipped below)
 
 
 ```
@@ -27,7 +26,7 @@ I tried putting small values as to see how the function behaves, But the outputs
 I searched for it online and found out that in python `^` is "XOR"(exclusive OR) and not equivalent to "`pow()` or `**`".
 
 
-Then I again tried with the small dummy values and this time is worked fine.Further Research on XOR made me realise that " Any number XORed with itself is 0" so i tried `k = e` to the server which would work like :
+Then I again tried with the small dummy values and this time it worked fine. Further Research on XOR made me realise that " Any number XORed with itself is 0" so i tried `k = e` to the server which would work like :
 
 
 ```
@@ -57,9 +56,9 @@ This is a standard case of "Caesar's Cipher" which I decrypted using `https://cy
 
 flag is "`utflag{Congrats! You caught a red herring!}`"
 
-Which said "red herring" in the flag. AND YES I DID TRIED TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.
+Which said "red herring" in the flag. AND YES I DID TRY TO PLUGIN THIS FLAG AND FELT LIKE AN IDIOT.
 
-This is where I got stuck with this challenge. I went back to problem statement to find more clues and it mentioned it uses " RSA-based 1-2 oblivious transfer protocol program". After studying 1-2 OT protocol for a while , I finally found the solution.
+This is where I got stuck with this challenge. I went back to the problem statement to find more clues and it mentioned it uses " RSA-based 1-2 oblivious transfer protocol program". After studying 1-2 OT protocol for a while , I finally found the solution.
 
 
 Basically, the server holds exactly 2 messages. It is designed such that the user can choose one of them without the server knowing which one was picked.
@@ -85,10 +84,10 @@ N = 7320659687307596757836953692756431226792068948238181385629069698561912361441
 e = 65537
 Z = (x1 - x0) % N       
 k = Z ^ e
-print(K)
+print(k)
 ```
 
-Now we have to give this value of `K` to server to get messages.Finally, using the same script, we can convert the integers back to ASCII flag.
+Now we have to give this value of `K` to server to get messages. Finally, using the same script, we can convert the integers back to ASCII flag.
 
 ```
   from Crypto.Util.number import long_to_bytes
