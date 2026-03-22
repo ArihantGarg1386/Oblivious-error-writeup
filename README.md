@@ -1,5 +1,5 @@
 # Oblivious-error-writeup
-**Category**:(Cryptography)
+**Category:**(Cryptography)
 
 In This Challenge, The author accidentally deleted the original code and replaced it.
 Which made the message (presumably the flag) "undecodable"
