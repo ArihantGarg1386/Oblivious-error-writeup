@@ -27,7 +27,7 @@ I searched for it online and found out that in python `^` is "XOR"(exclusive OR)
 Then I again tried with the small values and this time is worked fine.Further Research on XOR made me realise that " Any number XORed with itself is 0" so i tried `k = e` to the server which would work like :
 
 ```
-   v = (x0 +(int(k) ^ int(k))) % N
+   v = (x0 + (e ^ e)) % N
    v = (x0) % N
    v =  x0
 ```
